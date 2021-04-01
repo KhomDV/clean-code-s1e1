@@ -29,6 +29,13 @@
 
 }
 
+.name-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
 .main-container {
   display: block;
   width: 500px;
