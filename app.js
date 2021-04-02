@@ -8,13 +8,16 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-var taskInput=document.getElementById("new-task");//Add a new task.
+//var taskInput=document.getElementById("new-task");//Add a new task.
+var taskInput=document.querySelector(".task_new");//Add a new task.
 
 //var addButton=document.getElementsByTagName("button")[0];//first button
 var addButton=document.querySelector(".task__btn"); //first button
 
-var incompleteTaskHolder=document.getElementById("incomplete-tasks"); //ul of #incomplete-tasks
-var completedTasksHolder=document.getElementById("completed-tasks"); //completed-tasks
+//var incompleteTaskHolder=document.getElementById("incomplete-tasks"); //ul of #incomplete-tasks
+var incompleteTaskHolder=document.querySelector(".task_incomplete"); //ul of #incomplete-tasks
+//var completedTasksHolder=document.getElementById("completed-tasks"); //completed-tasks
+var completedTasksHolder=document.querySelector(".task_completed"); //completed-tasks
 
 
 //New task list item
@@ -97,7 +100,6 @@ var editTask=function(){
   var containsClass=listItem.classList.contains("edit-mode");
   //If class of the parent is .edit-mode
   if (containsClass) {
-
     //switch to .edit-mode
     //label becomes the inputs value.
     label.innerText=editInput.value;
@@ -160,10 +162,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
   console.log("bind list item events");
   //select ListItems children
   var checkBox=taskListItem.querySelector(".task__input_checkbox"); //input[type=checkbox]
-  // var editButton=taskListItem.querySelector("button.edit");
-  // var deleteButton=taskListItem.querySelector("button.delete");
-  var editButton=taskListItem.querySelector(".task__btn_edit"); //.btn.edit
-  var deleteButton=taskListItem.querySelector(".task__btn_delete"); //.btn.delete
+  var editButton=taskListItem.querySelector(".task__btn_edit"); //.button.edit
+  var deleteButton=taskListItem.querySelector(".task__btn_delete"); //.button.delete
 
   //Bind editTask to edit button.
   editButton.onclick=editTask;
