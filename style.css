@@ -28,7 +28,14 @@
   
 }
 
-.main-page {
+.name-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.main {
   display: block;
   width: 500px;
   margin: 0 auto 0;
@@ -74,8 +81,9 @@
 }
 
 /* Heading */
-.task-title,
-.new-task-label {
+/* .task-title,
+.new-task-label { */
+.task-title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -103,10 +111,14 @@
 }
 
 /* New Task */
-.new-task-label {
+/* .new-task-label {
   display: block;
   margin: 0 0 20px;
   width: 100%;
+} */
+.task-add {
+  display: flex;
+  margin-top: 20px;
 }
 
 /* Task list */
